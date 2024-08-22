@@ -1,0 +1,2534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UANodeSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:s1="http://yourorganisation.org/dlra%20server/Types.xsd" xmlns:s2="PTW_TUD/Masterarbeit_Moser/OPC_UA_for_EnFlex/Types.xsd" xmlns:s3="http://opcfoundation.org/UA/Machinery/Types.xsd" xmlns:ua="http://unifiedautomation.com/Configuration/NodeSet.xsd" xmlns:s4="http://opcfoundation.org/UA/DI/Types.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <NamespaceUris>
+        <Uri>http://yourorganisation.org/dlra%20server/</Uri>
+        <Uri>PTW_TUD/Masterarbeit_Moser/OPC_UA_for_EnFlex/</Uri>
+        <Uri>http://opcfoundation.org/UA/Machinery/</Uri>
+        <Uri>http://opcfoundation.org/UA/DI/</Uri>
+    </NamespaceUris>
+    <Models>
+        <Model ModelUri="http://yourorganisation.org/dlra server/" PublicationDate="2024-01-19T20:16:32Z" Version="1.0.0">
+            <RequiredModel ModelUri="http://opcfoundation.org/UA/" PublicationDate="2021-11-01T00:00:00Z" Version="1.04"/>
+            <RequiredModel ModelUri="http://opcfoundation.org/UA/DI/" PublicationDate="2022-11-03T00:00:00Z" Version="1.04.0"/>
+            <RequiredModel ModelUri="http://opcfoundation.org/UA/Machinery/" PublicationDate="2022-05-01T00:00:00Z" Version="1.02.0"/>
+            <RequiredModel ModelUri="http://yourorganisation.org/ADP_mt_co2/" PublicationDate="2023-06-20T14:48:44Z" Version="1.0.0"/>
+            <RequiredModel ModelUri="PTW_TUD/Masterarbeit_Moser/OPC_UA_for_EnFlex/" PublicationDate="1900-01-01T00:00:00Z" Version="1.0"/>
+        </Model>
+    </Models>
+    <Aliases>
+        <Alias Alias="Boolean">i=1</Alias>
+        <Alias Alias="Int32">i=6</Alias>
+        <Alias Alias="Double">i=11</Alias>
+        <Alias Alias="String">i=12</Alias>
+        <Alias Alias="DateTime">i=13</Alias>
+        <Alias Alias="LocalizedText">i=21</Alias>
+        <Alias Alias="HasTypeDefinition">i=40</Alias>
+        <Alias Alias="HasProperty">i=46</Alias>
+        <Alias Alias="HasComponent">i=47</Alias>
+        <Alias Alias="IdType">i=256</Alias>
+        <Alias Alias="NumericRange">i=291</Alias>
+    </Aliases>
+    <Extensions>
+        <Extension>
+            <ua:ModelInfo Tool="UaModeler" Hash="HFnlVu5FynRBludq7OVkPA==" Version="1.6.11"/>
+        </Extension>
+    </Extensions>
+    <UAObject NodeId="ns=1;i=5001" BrowseName="1:BvL_DLRA">
+        <DisplayName>BvL_DLRA</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1009</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=3;i=1001</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5002</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5008</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5016</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5001" NodeId="ns=1;i=5002" BrowseName="2:EnFlexData">
+        <DisplayName>EnFlexData</DisplayName>
+        <Description>Folder containing all data used for Energy Flexibility</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5003</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5005</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5006</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5001</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5007</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5002" NodeId="ns=1;i=5003" BrowseName="2:AllFlexibleLoads">
+        <DisplayName>AllFlexibleLoads</DisplayName>
+        <Description>This folder aggregates all flexible loads associated with the energy flexible machine. Use this folder for energy flexiblity automation</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5002</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5022</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5023</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5024</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5004</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5020</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5021</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5032</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5033</Reference>
+        </References>
+    </UAObject>
+    <UAObject NodeId="ns=1;i=5022" BrowseName="1:Heizstab_ST_12">
+        <DisplayName>Heizstab_ST_12</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1011</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6073</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6057</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6058</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5003</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6059</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6060</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6061</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5022" NodeId="ns=1;i=6073" BrowseName="2:AveragePower" AccessLevel="3">
+        <DisplayName>AveragePower</DisplayName>
+        <Description>Average power in conjuction with the "Unit" node. Use this node if the loads power can not be measured directly or indirectly. See technical documentation of the load</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5022</Reference>
+        </References>
+        <Value>
+            <uax:Double>12000</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5022" NodeId="ns=1;i=6057" BrowseName="2:CurrentCO2Emission" AccessLevel="3">
+        <DisplayName>CurrentCO2Emission</DisplayName>
+        <Description>In CO2-eq/h</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5022</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5022" NodeId="ns=1;i=6058" BrowseName="2:FlexibleLoadID" AccessLevel="3">
+        <DisplayName>FlexibleLoadID</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5022</Reference>
+        </References>
+        <Value>
+            <uax:String>d162e83e-abbd-11ee-bb33-6003088b0288</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5022" NodeId="ns=1;i=6059" BrowseName="2:IsOn" AccessLevel="3">
+        <DisplayName>IsOn</DisplayName>
+        <Description>Node that represents the current state of the load, either on or off.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5022</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>false</uax:Boolean>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5022" NodeId="ns=1;i=6060" BrowseName="2:Type" AccessLevel="3">
+        <DisplayName>Type</DisplayName>
+        <Description>The type of the load, e.g. electric, pneumatic, thermal, etc.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5022</Reference>
+        </References>
+        <Value>
+            <uax:String>electric</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5022" NodeId="ns=1;i=6061" BrowseName="2:Unit" AccessLevel="3">
+        <DisplayName>Unit</DisplayName>
+        <Description>The unit either associated with the "AveragePower" or "Power" node</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5022</Reference>
+        </References>
+        <Value>
+            <uax:String>Watt</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject NodeId="ns=1;i=5023" BrowseName="1:Heizstab_ST_34">
+        <DisplayName>Heizstab_ST_34</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1011</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6074</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6063</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6062</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5003</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6064</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6065</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6066</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5023" NodeId="ns=1;i=6074" BrowseName="2:AveragePower" AccessLevel="3">
+        <DisplayName>AveragePower</DisplayName>
+        <Description>Average power in conjuction with the "Unit" node. Use this node if the loads power can not be measured directly or indirectly. See technical documentation of the load</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5023</Reference>
+        </References>
+        <Value>
+            <uax:Double>12000</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5023" NodeId="ns=1;i=6063" BrowseName="2:CurrentCO2Emission" AccessLevel="3">
+        <DisplayName>CurrentCO2Emission</DisplayName>
+        <Description>In CO2-eq/h</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5023</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5023" NodeId="ns=1;i=6062" BrowseName="2:FlexibleLoadID" AccessLevel="3">
+        <DisplayName>FlexibleLoadID</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5023</Reference>
+        </References>
+        <Value>
+            <uax:String>dc5d3190-abbd-11ee-b8be-6003088b0288</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5023" NodeId="ns=1;i=6064" BrowseName="2:IsOn" AccessLevel="3">
+        <DisplayName>IsOn</DisplayName>
+        <Description>Node that represents the current state of the load, either on or off.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5023</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>false</uax:Boolean>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5023" NodeId="ns=1;i=6065" BrowseName="2:Type" AccessLevel="3">
+        <DisplayName>Type</DisplayName>
+        <Description>The type of the load, e.g. electric, pneumatic, thermal, etc.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5023</Reference>
+        </References>
+        <Value>
+            <uax:String>electric</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5023" NodeId="ns=1;i=6066" BrowseName="2:Unit" AccessLevel="3">
+        <DisplayName>Unit</DisplayName>
+        <Description>The unit either associated with the "AveragePower" or "Power" node</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5023</Reference>
+        </References>
+        <Value>
+            <uax:String>Watt</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject NodeId="ns=1;i=5024" BrowseName="1:Heizstab_ST_5">
+        <DisplayName>Heizstab_ST_5</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1011</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6075</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6068</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6067</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5003</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6069</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6070</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6071</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5024" NodeId="ns=1;i=6075" BrowseName="2:AveragePower" AccessLevel="3">
+        <DisplayName>AveragePower</DisplayName>
+        <Description>Average power in conjuction with the "Unit" node. Use this node if the loads power can not be measured directly or indirectly. See technical documentation of the load</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5024</Reference>
+        </References>
+        <Value>
+            <uax:Double>6000</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5024" NodeId="ns=1;i=6068" BrowseName="2:CurrentCO2Emission" AccessLevel="3">
+        <DisplayName>CurrentCO2Emission</DisplayName>
+        <Description>In CO2-eq/h</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5024</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5024" NodeId="ns=1;i=6067" BrowseName="2:FlexibleLoadID" AccessLevel="3">
+        <DisplayName>FlexibleLoadID</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5024</Reference>
+        </References>
+        <Value>
+            <uax:String>e8afa00e-abbd-11ee-90fc-6003088b0288</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5024" NodeId="ns=1;i=6069" BrowseName="2:IsOn" AccessLevel="3">
+        <DisplayName>IsOn</DisplayName>
+        <Description>Node that represents the current state of the load, either on or off.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5024</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>false</uax:Boolean>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5024" NodeId="ns=1;i=6070" BrowseName="2:Type" AccessLevel="3">
+        <DisplayName>Type</DisplayName>
+        <Description>The type of the load, e.g. electric, pneumatic, thermal, etc.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5024</Reference>
+        </References>
+        <Value>
+            <uax:String>electric</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5024" NodeId="ns=1;i=6071" BrowseName="2:Unit" AccessLevel="3">
+        <DisplayName>Unit</DisplayName>
+        <Description>The unit either associated with the "AveragePower" or "Power" node</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5024</Reference>
+        </References>
+        <Value>
+            <uax:String>Watt</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject ParentNodeId="ns=1;i=5003" NodeId="ns=1;i=5004" BrowseName="2:Heizstab_WT_12">
+        <DisplayName>Heizstab_WT_12</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1011</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6045</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6001</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6002</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5003</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6003</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6004</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6005</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5004" NodeId="ns=1;i=6045" BrowseName="2:AveragePower" AccessLevel="3">
+        <DisplayName>AveragePower</DisplayName>
+        <Description>Average power in conjuction with the "Unit" node. Use this node if the loads power can not be measured directly or indirectly. See technical documentation of the load</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5004</Reference>
+        </References>
+        <Value>
+            <uax:Double>12000</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5004" NodeId="ns=1;i=6001" BrowseName="2:CurrentCO2Emission" AccessLevel="3">
+        <DisplayName>CurrentCO2Emission</DisplayName>
+        <Description>In CO2-eq/h</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5004</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5004" NodeId="ns=1;i=6002" BrowseName="2:FlexibleLoadID" AccessLevel="3">
+        <DisplayName>FlexibleLoadID</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5004</Reference>
+        </References>
+        <Value>
+            <uax:String>f3d5cea4-abbd-11ee-b295-6003088b0288</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5004" NodeId="ns=1;i=6003" BrowseName="2:IsOn" AccessLevel="3">
+        <DisplayName>IsOn</DisplayName>
+        <Description>Node that represents the current state of the load, either on or off.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5004</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>false</uax:Boolean>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5004" NodeId="ns=1;i=6004" BrowseName="2:Type" AccessLevel="3">
+        <DisplayName>Type</DisplayName>
+        <Description>The type of the load, e.g. electric, pneumatic, thermal, etc.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5004</Reference>
+        </References>
+        <Value>
+            <uax:String>electric</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5004" NodeId="ns=1;i=6005" BrowseName="2:Unit" AccessLevel="3">
+        <DisplayName>Unit</DisplayName>
+        <Description>The unit either associated with the "AveragePower" or "Power" node</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5004</Reference>
+        </References>
+        <Value>
+            <uax:String>Watt</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject NodeId="ns=1;i=5020" BrowseName="1:Heizstab_WT_34">
+        <DisplayName>Heizstab_WT_34</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1011</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6046</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6047</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6048</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5003</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6049</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6050</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6051</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5020" NodeId="ns=1;i=6046" BrowseName="2:AveragePower" AccessLevel="3">
+        <DisplayName>AveragePower</DisplayName>
+        <Description>Average power in conjuction with the "Unit" node. Use this node if the loads power can not be measured directly or indirectly. See technical documentation of the load</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5020</Reference>
+        </References>
+        <Value>
+            <uax:Double>12000</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5020" NodeId="ns=1;i=6047" BrowseName="2:CurrentCO2Emission" AccessLevel="3">
+        <DisplayName>CurrentCO2Emission</DisplayName>
+        <Description>In CO2-eq/h</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5020</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5020" NodeId="ns=1;i=6048" BrowseName="2:FlexibleLoadID" AccessLevel="3">
+        <DisplayName>FlexibleLoadID</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5020</Reference>
+        </References>
+        <Value>
+            <uax:String>07d6e686-abbe-11ee-b37d-6003088b0288</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5020" NodeId="ns=1;i=6049" BrowseName="2:IsOn" AccessLevel="3">
+        <DisplayName>IsOn</DisplayName>
+        <Description>Node that represents the current state of the load, either on or off.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5020</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>false</uax:Boolean>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5020" NodeId="ns=1;i=6050" BrowseName="2:Type" AccessLevel="3">
+        <DisplayName>Type</DisplayName>
+        <Description>The type of the load, e.g. electric, pneumatic, thermal, etc.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5020</Reference>
+        </References>
+        <Value>
+            <uax:String>electric</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5020" NodeId="ns=1;i=6051" BrowseName="2:Unit" AccessLevel="3">
+        <DisplayName>Unit</DisplayName>
+        <Description>The unit either associated with the "AveragePower" or "Power" node</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5020</Reference>
+        </References>
+        <Value>
+            <uax:String>Watt</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject NodeId="ns=1;i=5021" BrowseName="1:Heizstab_WT_5">
+        <DisplayName>Heizstab_WT_5</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1011</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6072</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6053</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6052</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5003</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6054</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6055</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6056</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5021" NodeId="ns=1;i=6072" BrowseName="2:AveragePower" AccessLevel="3">
+        <DisplayName>AveragePower</DisplayName>
+        <Description>Average power in conjuction with the "Unit" node. Use this node if the loads power can not be measured directly or indirectly. See technical documentation of the load</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5021</Reference>
+        </References>
+        <Value>
+            <uax:Double>6000</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5021" NodeId="ns=1;i=6053" BrowseName="2:CurrentCO2Emission" AccessLevel="3">
+        <DisplayName>CurrentCO2Emission</DisplayName>
+        <Description>In CO2-eq/h</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5021</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5021" NodeId="ns=1;i=6052" BrowseName="2:FlexibleLoadID" AccessLevel="3">
+        <DisplayName>FlexibleLoadID</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5021</Reference>
+        </References>
+        <Value>
+            <uax:String>0eac2192-abbe-11ee-b3f4-6003088b0288</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5021" NodeId="ns=1;i=6054" BrowseName="2:IsOn" AccessLevel="3">
+        <DisplayName>IsOn</DisplayName>
+        <Description>Node that represents the current state of the load, either on or off.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5021</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>false</uax:Boolean>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5021" NodeId="ns=1;i=6055" BrowseName="2:Type" AccessLevel="3">
+        <DisplayName>Type</DisplayName>
+        <Description>The type of the load, e.g. electric, pneumatic, thermal, etc.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5021</Reference>
+        </References>
+        <Value>
+            <uax:String>electric</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5021" NodeId="ns=1;i=6056" BrowseName="2:Unit" AccessLevel="3">
+        <DisplayName>Unit</DisplayName>
+        <Description>The unit either associated with the "AveragePower" or "Power" node</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5021</Reference>
+        </References>
+        <Value>
+            <uax:String>Watt</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject NodeId="ns=1;i=5032" BrowseName="1:IR_Strahler_14">
+        <DisplayName>IR_Strahler_14</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1011</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6118</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6117</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5003</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6119</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6127</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6120</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6121</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5032" NodeId="ns=1;i=6118" BrowseName="2:CurrentCO2Emission" AccessLevel="3">
+        <DisplayName>CurrentCO2Emission</DisplayName>
+        <Description>In CO2-eq/h</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5032</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5032" NodeId="ns=1;i=6117" BrowseName="2:FlexibleLoadID" AccessLevel="3">
+        <DisplayName>FlexibleLoadID</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5032</Reference>
+        </References>
+        <Value>
+            <uax:String>169b0fa8-abbe-11ee-9706-6003088b0288</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5032" NodeId="ns=1;i=6119" BrowseName="2:IsOn" AccessLevel="3">
+        <DisplayName>IsOn</DisplayName>
+        <Description>Node that represents the current state of the load, either on or off.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5032</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>false</uax:Boolean>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5032" NodeId="ns=1;i=6127" BrowseName="2:Power" AccessLevel="3">
+        <DisplayName>Power</DisplayName>
+        <Description>Power in conjuction with the "Unit" node</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5032</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5032" NodeId="ns=1;i=6120" BrowseName="2:Type" AccessLevel="3">
+        <DisplayName>Type</DisplayName>
+        <Description>The type of the load, e.g. electric, pneumatic, thermal, etc.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5032</Reference>
+        </References>
+        <Value>
+            <uax:String>electric</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5032" NodeId="ns=1;i=6121" BrowseName="2:Unit" AccessLevel="3">
+        <DisplayName>Unit</DisplayName>
+        <Description>The unit either associated with the "AveragePower" or "Power" node</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5032</Reference>
+        </References>
+        <Value>
+            <uax:String>Watt</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject NodeId="ns=1;i=5033" BrowseName="1:IR_Strahler_23">
+        <DisplayName>IR_Strahler_23</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1011</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6122</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6123</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5003</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6124</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6128</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6125</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6126</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5033" NodeId="ns=1;i=6122" BrowseName="2:CurrentCO2Emission" AccessLevel="3">
+        <DisplayName>CurrentCO2Emission</DisplayName>
+        <Description>In CO2-eq/h</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5033</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5033" NodeId="ns=1;i=6123" BrowseName="2:FlexibleLoadID" AccessLevel="3">
+        <DisplayName>FlexibleLoadID</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5033</Reference>
+        </References>
+        <Value>
+            <uax:String>296844b6-abbe-11ee-afac-6003088b0288</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5033" NodeId="ns=1;i=6124" BrowseName="2:IsOn" AccessLevel="3">
+        <DisplayName>IsOn</DisplayName>
+        <Description>Node that represents the current state of the load, either on or off.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5033</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>false</uax:Boolean>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5033" NodeId="ns=1;i=6128" BrowseName="2:Power" AccessLevel="3">
+        <DisplayName>Power</DisplayName>
+        <Description>Power in conjuction with the "Unit" node</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5033</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5033" NodeId="ns=1;i=6125" BrowseName="2:Type" AccessLevel="3">
+        <DisplayName>Type</DisplayName>
+        <Description>The type of the load, e.g. electric, pneumatic, thermal, etc.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5033</Reference>
+        </References>
+        <Value>
+            <uax:String>electric</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5033" NodeId="ns=1;i=6126" BrowseName="2:Unit" AccessLevel="3">
+        <DisplayName>Unit</DisplayName>
+        <Description>The unit either associated with the "AveragePower" or "Power" node</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5033</Reference>
+        </References>
+        <Value>
+            <uax:String>Watt</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject ParentNodeId="ns=1;i=5002" NodeId="ns=1;i=5005" BrowseName="2:AllLoadChanges">
+        <DisplayName>AllLoadChanges</DisplayName>
+        <Description>This folder aggregates all load changes. Iterate over children for automation. </Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5002</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5002" NodeId="ns=1;i=5006" BrowseName="2:CompletedEnFlexMeasures">
+        <DisplayName>CompletedEnFlexMeasures</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5002</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5002" NodeId="ns=1;i=5007" BrowseName="2:PlannedEnFlexMeasures">
+        <DisplayName>PlannedEnFlexMeasures</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5002</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5001" NodeId="ns=1;i=5008" BrowseName="2:EnMgmtData">
+        <DisplayName>EnMgmtData</DisplayName>
+        <Description>Folder containing all data used for Energy Management</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5009</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5010</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5001</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5012</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5013</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5014</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5008" NodeId="ns=1;i=5009" BrowseName="2:AllKPIs">
+        <DisplayName>AllKPIs</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5008</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5019</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5018</Reference>
+        </References>
+    </UAObject>
+    <UAObject NodeId="ns=1;i=5019" BrowseName="1:CO2EmissionPerWorkpiece">
+        <DisplayName>CO2EmissionPerWorkpiece</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1018</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6038</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6039</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6040</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5009</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6041</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6042</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6043</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6044</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5019" NodeId="ns=1;i=6038" BrowseName="2:BaselineDescription" AccessLevel="3">
+        <DisplayName>BaselineDescription</DisplayName>
+        <Description>Describes how the baseline value was calculated.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5019</Reference>
+        </References>
+        <Value>
+            <uax:String>Calculated with daily average CEF_total. Measured on Jan 19th 2024. </uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5019" NodeId="ns=1;i=6039" BrowseName="2:BaselineValue" AccessLevel="3">
+        <DisplayName>BaselineValue</DisplayName>
+        <Description>Baseline for the KPI, defined by a standard-process.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5019</Reference>
+        </References>
+        <Value>
+            <uax:Double>0.0277</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5019" NodeId="ns=1;i=6040" BrowseName="2:CalculationIntervalLength" AccessLevel="3">
+        <DisplayName>CalculationIntervalLength</DisplayName>
+        <Description>Length of the interval used for calculating the baseline and all subsequent values of the KPI. Unit: hours</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5019</Reference>
+        </References>
+        <Value>
+            <uax:Double>1</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5019" NodeId="ns=1;i=6041" BrowseName="2:CurrentValue" AccessLevel="3">
+        <DisplayName>CurrentValue</DisplayName>
+        <Description>Current value of the KPI, changes until completion of the current interval</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5019</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="DateTime" ParentNodeId="ns=1;i=5019" NodeId="ns=1;i=6042" BrowseName="2:CurrentValueBeginOfCalculation" AccessLevel="3">
+        <DisplayName>CurrentValueBeginOfCalculation</DisplayName>
+        <Description>Begin of the current interval used for KPI calculation</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5019</Reference>
+        </References>
+        <Value>
+            <uax:DateTime>2000-01-01T00:00:00Z</uax:DateTime>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5019" NodeId="ns=1;i=6043" BrowseName="2:ImprovementFromBaselineValue" AccessLevel="3">
+        <DisplayName>ImprovementFromBaselineValue</DisplayName>
+        <Description>Improvement from baseline, can be can be above or below 1</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5019</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5019" NodeId="ns=1;i=6044" BrowseName="2:KPIDefinition" AccessLevel="3">
+        <DisplayName>KPIDefinition</DisplayName>
+        <Description>How the KPI is defined, including units, e.g. Workpieces/Wh</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5019</Reference>
+        </References>
+        <Value>
+            <uax:String>CO2-eq/n_workpiece calculated every hour</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject NodeId="ns=1;i=5018" BrowseName="1:ElectricityCostPerWorkpiece">
+        <DisplayName>ElectricityCostPerWorkpiece</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1018</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6031</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6032</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6033</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6034</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6035</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5009</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6036</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6037</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5018" NodeId="ns=1;i=6031" BrowseName="2:BaselineDescription" AccessLevel="3">
+        <DisplayName>BaselineDescription</DisplayName>
+        <Description>Describes how the baseline value was calculated.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5018</Reference>
+        </References>
+        <Value>
+            <uax:String>Calculated with daily average electicity price, using current day-ahead data. </uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5018" NodeId="ns=1;i=6032" BrowseName="2:BaselineValue" AccessLevel="3">
+        <DisplayName>BaselineValue</DisplayName>
+        <Description>Baseline for the KPI, defined by a standard-process.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5018</Reference>
+        </References>
+        <Value>
+            <uax:Double>0.0078</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5018" NodeId="ns=1;i=6033" BrowseName="2:CalculationIntervalLength" AccessLevel="3">
+        <DisplayName>CalculationIntervalLength</DisplayName>
+        <Description>Length of the interval used for calculating the baseline and all subsequent values of the KPI. Unit: hours</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5018</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5018" NodeId="ns=1;i=6034" BrowseName="2:CurrentValue" AccessLevel="3">
+        <DisplayName>CurrentValue</DisplayName>
+        <Description>Current value of the KPI, changes until completion of the current interval</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5018</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="DateTime" ParentNodeId="ns=1;i=5018" NodeId="ns=1;i=6035" BrowseName="2:CurrentValueBeginOfCalculation" AccessLevel="3">
+        <DisplayName>CurrentValueBeginOfCalculation</DisplayName>
+        <Description>Begin of the current interval used for KPI calculation</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5018</Reference>
+        </References>
+        <Value>
+            <uax:DateTime>2000-01-01T00:00:00Z</uax:DateTime>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5018" NodeId="ns=1;i=6036" BrowseName="2:ImprovementFromBaselineValue" AccessLevel="3">
+        <DisplayName>ImprovementFromBaselineValue</DisplayName>
+        <Description>Improvement from baseline, can be can be above or below 1</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5018</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5018" NodeId="ns=1;i=6037" BrowseName="2:KPIDefinition" AccessLevel="3">
+        <DisplayName>KPIDefinition</DisplayName>
+        <Description>How the KPI is defined, including units, e.g. Workpieces/Wh</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5018</Reference>
+        </References>
+        <Value>
+            <uax:String>Euro/n_workpiece calculated every hour</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject ParentNodeId="ns=1;i=5008" NodeId="ns=1;i=5010" BrowseName="2:AllLoads">
+        <DisplayName>AllLoads</DisplayName>
+        <Description>This folder aggregates all loads within a machine, independent of flexibility. Use this folder for monitoring.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5039</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5008</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5028</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5025</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5026</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5031</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5011</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5029</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5030</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5042</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5034</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5035</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5027</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5038</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5037</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5036</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5040</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5041</Reference>
+        </References>
+    </UAObject>
+    <UAObject NodeId="ns=1;i=5039" BrowseName="1:Abluefter">
+        <DisplayName>Abluefter</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1005</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5010</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6160</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6156</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6157</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6158</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6159</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5039" NodeId="ns=1;i=6160" BrowseName="2:AveragePower" AccessLevel="3">
+        <DisplayName>AveragePower</DisplayName>
+        <Description>Average power in conjuction with the "Unit" node. Use this node if the loads power can not be measured directly or indirectly. See technical documentation of the load</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5039</Reference>
+        </References>
+        <Value>
+            <uax:Double>1500</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5039" NodeId="ns=1;i=6156" BrowseName="2:CurrentCO2Emission" AccessLevel="3">
+        <DisplayName>CurrentCO2Emission</DisplayName>
+        <Description>In CO2-eq/h</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5039</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5039" NodeId="ns=1;i=6157" BrowseName="2:IsOn" AccessLevel="3">
+        <DisplayName>IsOn</DisplayName>
+        <Description>Node that represents the current state of the load, either on or off.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5039</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>false</uax:Boolean>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5039" NodeId="ns=1;i=6158" BrowseName="2:Type" AccessLevel="3">
+        <DisplayName>Type</DisplayName>
+        <Description>The type of the load, e.g. electric, pneumatic, thermal, etc.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5039</Reference>
+        </References>
+        <Value>
+            <uax:String>electric</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5039" NodeId="ns=1;i=6159" BrowseName="2:Unit" AccessLevel="3">
+        <DisplayName>Unit</DisplayName>
+        <Description>The unit either associated with the "AveragePower" or "Power" node</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5039</Reference>
+        </References>
+        <Value>
+            <uax:String>Watt</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject NodeId="ns=1;i=5028" BrowseName="1:Bandantrieb">
+        <DisplayName>Bandantrieb</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1005</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6097</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5010</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6093</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6094</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6095</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6096</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5028" NodeId="ns=1;i=6097" BrowseName="2:AveragePower" AccessLevel="3">
+        <DisplayName>AveragePower</DisplayName>
+        <Description>Average power in conjuction with the "Unit" node. Use this node if the loads power can not be measured directly or indirectly. See technical documentation of the load</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5028</Reference>
+        </References>
+        <Value>
+            <uax:Double>120</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5028" NodeId="ns=1;i=6093" BrowseName="2:CurrentCO2Emission" AccessLevel="3">
+        <DisplayName>CurrentCO2Emission</DisplayName>
+        <Description>In CO2-eq/h</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5028</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5028" NodeId="ns=1;i=6094" BrowseName="2:IsOn" AccessLevel="3">
+        <DisplayName>IsOn</DisplayName>
+        <Description>Node that represents the current state of the load, either on or off.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5028</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>false</uax:Boolean>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5028" NodeId="ns=1;i=6095" BrowseName="2:Type" AccessLevel="3">
+        <DisplayName>Type</DisplayName>
+        <Description>The type of the load, e.g. electric, pneumatic, thermal, etc.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5028</Reference>
+        </References>
+        <Value>
+            <uax:String>electric</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5028" NodeId="ns=1;i=6096" BrowseName="2:Unit" AccessLevel="3">
+        <DisplayName>Unit</DisplayName>
+        <Description>The unit either associated with the "AveragePower" or "Power" node</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5028</Reference>
+        </References>
+        <Value>
+            <uax:String>Watt</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject NodeId="ns=1;i=5025" BrowseName="1:Heizstab_ST_12">
+        <DisplayName>Heizstab_ST_12</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1011</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6076</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6077</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6078</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5010</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6079</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6080</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6081</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5025" NodeId="ns=1;i=6076" BrowseName="2:AveragePower" AccessLevel="3">
+        <DisplayName>AveragePower</DisplayName>
+        <Description>Average power in conjuction with the "Unit" node. Use this node if the loads power can not be measured directly or indirectly. See technical documentation of the load</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5025</Reference>
+        </References>
+        <Value>
+            <uax:Double>12000</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5025" NodeId="ns=1;i=6077" BrowseName="2:CurrentCO2Emission" AccessLevel="3">
+        <DisplayName>CurrentCO2Emission</DisplayName>
+        <Description>In CO2-eq/h</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5025</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5025" NodeId="ns=1;i=6078" BrowseName="2:FlexibleLoadID" AccessLevel="3">
+        <DisplayName>FlexibleLoadID</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5025</Reference>
+        </References>
+        <Value>
+            <uax:String>d162e83e-abbd-11ee-bb33-6003088b0288</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5025" NodeId="ns=1;i=6079" BrowseName="2:IsOn" AccessLevel="3">
+        <DisplayName>IsOn</DisplayName>
+        <Description>Node that represents the current state of the load, either on or off.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5025</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>false</uax:Boolean>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5025" NodeId="ns=1;i=6080" BrowseName="2:Type" AccessLevel="3">
+        <DisplayName>Type</DisplayName>
+        <Description>The type of the load, e.g. electric, pneumatic, thermal, etc.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5025</Reference>
+        </References>
+        <Value>
+            <uax:String>electric</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5025" NodeId="ns=1;i=6081" BrowseName="2:Unit" AccessLevel="3">
+        <DisplayName>Unit</DisplayName>
+        <Description>The unit either associated with the "AveragePower" or "Power" node</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5025</Reference>
+        </References>
+        <Value>
+            <uax:String>Watt</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject NodeId="ns=1;i=5026" BrowseName="1:Heizstab_ST_23">
+        <DisplayName>Heizstab_ST_23</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1011</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6082</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6083</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6084</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5010</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6085</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6086</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6087</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5026" NodeId="ns=1;i=6082" BrowseName="2:AveragePower" AccessLevel="3">
+        <DisplayName>AveragePower</DisplayName>
+        <Description>Average power in conjuction with the "Unit" node. Use this node if the loads power can not be measured directly or indirectly. See technical documentation of the load</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5026</Reference>
+        </References>
+        <Value>
+            <uax:Double>12000</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5026" NodeId="ns=1;i=6083" BrowseName="2:CurrentCO2Emission" AccessLevel="3">
+        <DisplayName>CurrentCO2Emission</DisplayName>
+        <Description>In CO2-eq/h</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5026</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5026" NodeId="ns=1;i=6084" BrowseName="2:FlexibleLoadID" AccessLevel="3">
+        <DisplayName>FlexibleLoadID</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5026</Reference>
+        </References>
+        <Value>
+            <uax:String>dc5d3190-abbd-11ee-b8be-6003088b0288</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5026" NodeId="ns=1;i=6085" BrowseName="2:IsOn" AccessLevel="3">
+        <DisplayName>IsOn</DisplayName>
+        <Description>Node that represents the current state of the load, either on or off.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5026</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>false</uax:Boolean>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5026" NodeId="ns=1;i=6086" BrowseName="2:Type" AccessLevel="3">
+        <DisplayName>Type</DisplayName>
+        <Description>The type of the load, e.g. electric, pneumatic, thermal, etc.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5026</Reference>
+        </References>
+        <Value>
+            <uax:String>electric</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5026" NodeId="ns=1;i=6087" BrowseName="2:Unit" AccessLevel="3">
+        <DisplayName>Unit</DisplayName>
+        <Description>The unit either associated with the "AveragePower" or "Power" node</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5026</Reference>
+        </References>
+        <Value>
+            <uax:String>Watt</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject NodeId="ns=1;i=5031" BrowseName="1:Heizstab_ST_5">
+        <DisplayName>Heizstab_ST_5</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1011</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6111</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6112</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6113</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5010</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6114</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6115</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6116</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5031" NodeId="ns=1;i=6111" BrowseName="2:AveragePower" AccessLevel="3">
+        <DisplayName>AveragePower</DisplayName>
+        <Description>Average power in conjuction with the "Unit" node. Use this node if the loads power can not be measured directly or indirectly. See technical documentation of the load</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5031</Reference>
+        </References>
+        <Value>
+            <uax:Double>6000</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5031" NodeId="ns=1;i=6112" BrowseName="2:CurrentCO2Emission" AccessLevel="3">
+        <DisplayName>CurrentCO2Emission</DisplayName>
+        <Description>In CO2-eq/h</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5031</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5031" NodeId="ns=1;i=6113" BrowseName="2:FlexibleLoadID" AccessLevel="3">
+        <DisplayName>FlexibleLoadID</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5031</Reference>
+        </References>
+        <Value>
+            <uax:String>e8afa00e-abbd-11ee-90fc-6003088b0288</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5031" NodeId="ns=1;i=6114" BrowseName="2:IsOn" AccessLevel="3">
+        <DisplayName>IsOn</DisplayName>
+        <Description>Node that represents the current state of the load, either on or off.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5031</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>false</uax:Boolean>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5031" NodeId="ns=1;i=6115" BrowseName="2:Type" AccessLevel="3">
+        <DisplayName>Type</DisplayName>
+        <Description>The type of the load, e.g. electric, pneumatic, thermal, etc.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5031</Reference>
+        </References>
+        <Value>
+            <uax:String>electric</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5031" NodeId="ns=1;i=6116" BrowseName="2:Unit" AccessLevel="3">
+        <DisplayName>Unit</DisplayName>
+        <Description>The unit either associated with the "AveragePower" or "Power" node</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5031</Reference>
+        </References>
+        <Value>
+            <uax:String>Watt</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject ParentNodeId="ns=1;i=5010" NodeId="ns=1;i=5011" BrowseName="2:Heizstab_WT_12">
+        <DisplayName>Heizstab_WT_12</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1011</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6098</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6006</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6007</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5010</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6008</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6009</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6010</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5011" NodeId="ns=1;i=6098" BrowseName="2:AveragePower" AccessLevel="3">
+        <DisplayName>AveragePower</DisplayName>
+        <Description>Average power in conjuction with the "Unit" node. Use this node if the loads power can not be measured directly or indirectly. See technical documentation of the load</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5011</Reference>
+        </References>
+        <Value>
+            <uax:Double>12000</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5011" NodeId="ns=1;i=6006" BrowseName="2:CurrentCO2Emission" AccessLevel="3">
+        <DisplayName>CurrentCO2Emission</DisplayName>
+        <Description>In CO2-eq/h</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5011</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5011" NodeId="ns=1;i=6007" BrowseName="2:FlexibleLoadID" AccessLevel="3">
+        <DisplayName>FlexibleLoadID</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5011</Reference>
+        </References>
+        <Value>
+            <uax:String>f3d5cea4-abbd-11ee-b295-6003088b0288</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5011" NodeId="ns=1;i=6008" BrowseName="2:IsOn" AccessLevel="3">
+        <DisplayName>IsOn</DisplayName>
+        <Description>Node that represents the current state of the load, either on or off.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5011</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>false</uax:Boolean>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5011" NodeId="ns=1;i=6009" BrowseName="2:Type" AccessLevel="3">
+        <DisplayName>Type</DisplayName>
+        <Description>The type of the load, e.g. electric, pneumatic, thermal, etc.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5011</Reference>
+        </References>
+        <Value>
+            <uax:String>electric</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5011" NodeId="ns=1;i=6010" BrowseName="2:Unit" AccessLevel="3">
+        <DisplayName>Unit</DisplayName>
+        <Description>The unit either associated with the "AveragePower" or "Power" node</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5011</Reference>
+        </References>
+        <Value>
+            <uax:String>Watt</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject NodeId="ns=1;i=5029" BrowseName="1:Heizstab_WT_23">
+        <DisplayName>Heizstab_WT_23</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1011</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6099</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6100</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6101</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5010</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6102</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6103</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6104</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5029" NodeId="ns=1;i=6099" BrowseName="2:AveragePower" AccessLevel="3">
+        <DisplayName>AveragePower</DisplayName>
+        <Description>Average power in conjuction with the "Unit" node. Use this node if the loads power can not be measured directly or indirectly. See technical documentation of the load</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5029</Reference>
+        </References>
+        <Value>
+            <uax:Double>12000</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5029" NodeId="ns=1;i=6100" BrowseName="2:CurrentCO2Emission" AccessLevel="3">
+        <DisplayName>CurrentCO2Emission</DisplayName>
+        <Description>In CO2-eq/h</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5029</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5029" NodeId="ns=1;i=6101" BrowseName="2:FlexibleLoadID" AccessLevel="3">
+        <DisplayName>FlexibleLoadID</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5029</Reference>
+        </References>
+        <Value>
+            <uax:String>07d6e686-abbe-11ee-b37d-6003088b0288</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5029" NodeId="ns=1;i=6102" BrowseName="2:IsOn" AccessLevel="3">
+        <DisplayName>IsOn</DisplayName>
+        <Description>Node that represents the current state of the load, either on or off.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5029</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>false</uax:Boolean>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5029" NodeId="ns=1;i=6103" BrowseName="2:Type" AccessLevel="3">
+        <DisplayName>Type</DisplayName>
+        <Description>The type of the load, e.g. electric, pneumatic, thermal, etc.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5029</Reference>
+        </References>
+        <Value>
+            <uax:String>electric</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5029" NodeId="ns=1;i=6104" BrowseName="2:Unit" AccessLevel="3">
+        <DisplayName>Unit</DisplayName>
+        <Description>The unit either associated with the "AveragePower" or "Power" node</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5029</Reference>
+        </References>
+        <Value>
+            <uax:String>Watt</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject NodeId="ns=1;i=5030" BrowseName="1:Heizstab_WT_5">
+        <DisplayName>Heizstab_WT_5</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1011</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6105</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6106</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6107</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5010</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6108</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6109</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6110</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5030" NodeId="ns=1;i=6105" BrowseName="2:AveragePower" AccessLevel="3">
+        <DisplayName>AveragePower</DisplayName>
+        <Description>Average power in conjuction with the "Unit" node. Use this node if the loads power can not be measured directly or indirectly. See technical documentation of the load</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5030</Reference>
+        </References>
+        <Value>
+            <uax:Double>6000</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5030" NodeId="ns=1;i=6106" BrowseName="2:CurrentCO2Emission" AccessLevel="3">
+        <DisplayName>CurrentCO2Emission</DisplayName>
+        <Description>In CO2-eq/h</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5030</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5030" NodeId="ns=1;i=6107" BrowseName="2:FlexibleLoadID" AccessLevel="3">
+        <DisplayName>FlexibleLoadID</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5030</Reference>
+        </References>
+        <Value>
+            <uax:String>0eac2192-abbe-11ee-b3f4-6003088b0288</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5030" NodeId="ns=1;i=6108" BrowseName="2:IsOn" AccessLevel="3">
+        <DisplayName>IsOn</DisplayName>
+        <Description>Node that represents the current state of the load, either on or off.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5030</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>false</uax:Boolean>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5030" NodeId="ns=1;i=6109" BrowseName="2:Type" AccessLevel="3">
+        <DisplayName>Type</DisplayName>
+        <Description>The type of the load, e.g. electric, pneumatic, thermal, etc.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5030</Reference>
+        </References>
+        <Value>
+            <uax:String>electric</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5030" NodeId="ns=1;i=6110" BrowseName="2:Unit" AccessLevel="3">
+        <DisplayName>Unit</DisplayName>
+        <Description>The unit either associated with the "AveragePower" or "Power" node</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5030</Reference>
+        </References>
+        <Value>
+            <uax:String>Watt</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject NodeId="ns=1;i=5042" BrowseName="1:Induktor">
+        <DisplayName>Induktor</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1005</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6175</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6171</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5010</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6172</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6173</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6174</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5042" NodeId="ns=1;i=6175" BrowseName="2:AveragePower" AccessLevel="3">
+        <DisplayName>AveragePower</DisplayName>
+        <Description>Average power in conjuction with the "Unit" node. Use this node if the loads power can not be measured directly or indirectly. See technical documentation of the load</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5042</Reference>
+        </References>
+        <Value>
+            <uax:Double>10000</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5042" NodeId="ns=1;i=6171" BrowseName="2:CurrentCO2Emission" AccessLevel="3">
+        <DisplayName>CurrentCO2Emission</DisplayName>
+        <Description>In CO2-eq/h</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5042</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5042" NodeId="ns=1;i=6172" BrowseName="2:IsOn" AccessLevel="3">
+        <DisplayName>IsOn</DisplayName>
+        <Description>Node that represents the current state of the load, either on or off.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5042</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>false</uax:Boolean>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5042" NodeId="ns=1;i=6173" BrowseName="2:Type" AccessLevel="3">
+        <DisplayName>Type</DisplayName>
+        <Description>The type of the load, e.g. electric, pneumatic, thermal, etc.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5042</Reference>
+        </References>
+        <Value>
+            <uax:String>electric</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5042" NodeId="ns=1;i=6174" BrowseName="2:Unit" AccessLevel="3">
+        <DisplayName>Unit</DisplayName>
+        <Description>The unit either associated with the "AveragePower" or "Power" node</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5042</Reference>
+        </References>
+        <Value>
+            <uax:String>Watt</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject NodeId="ns=1;i=5034" BrowseName="1:IR_Strahler_14">
+        <DisplayName>IR_Strahler_14</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1011</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6130</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6129</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5010</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6131</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6139</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6132</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6133</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5034" NodeId="ns=1;i=6130" BrowseName="2:CurrentCO2Emission" AccessLevel="3">
+        <DisplayName>CurrentCO2Emission</DisplayName>
+        <Description>In CO2-eq(t)</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5034</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5034" NodeId="ns=1;i=6129" BrowseName="2:FlexibleLoadID" AccessLevel="3">
+        <DisplayName>FlexibleLoadID</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5034</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5034" NodeId="ns=1;i=6131" BrowseName="2:IsOn" AccessLevel="3">
+        <DisplayName>IsOn</DisplayName>
+        <Description>Node that represents the current state of the load, either on or off.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5034</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>false</uax:Boolean>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5034" NodeId="ns=1;i=6139" BrowseName="2:Power" AccessLevel="3">
+        <DisplayName>Power</DisplayName>
+        <Description>Power in conjuction with the "Unit" node</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5034</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5034" NodeId="ns=1;i=6132" BrowseName="2:Type" AccessLevel="3">
+        <DisplayName>Type</DisplayName>
+        <Description>The type of the load, e.g. electric, pneumatic, thermal, etc.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5034</Reference>
+        </References>
+        <Value>
+            <uax:String></uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5034" NodeId="ns=1;i=6133" BrowseName="2:Unit" AccessLevel="3">
+        <DisplayName>Unit</DisplayName>
+        <Description>The unit either associated with the "AveragePower" or "Power" node</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5034</Reference>
+        </References>
+        <Value>
+            <uax:String></uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject NodeId="ns=1;i=5035" BrowseName="1:IR_Strahler_23">
+        <DisplayName>IR_Strahler_23</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1011</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6134</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6135</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5010</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6136</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6140</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6137</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6138</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5035" NodeId="ns=1;i=6134" BrowseName="2:CurrentCO2Emission" AccessLevel="3">
+        <DisplayName>CurrentCO2Emission</DisplayName>
+        <Description>In CO2-eq/h</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5035</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5035" NodeId="ns=1;i=6135" BrowseName="2:FlexibleLoadID" AccessLevel="3">
+        <DisplayName>FlexibleLoadID</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5035</Reference>
+        </References>
+        <Value>
+            <uax:String>296844b6-abbe-11ee-afac-6003088b0288</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5035" NodeId="ns=1;i=6136" BrowseName="2:IsOn" AccessLevel="3">
+        <DisplayName>IsOn</DisplayName>
+        <Description>Node that represents the current state of the load, either on or off.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5035</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>false</uax:Boolean>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5035" NodeId="ns=1;i=6140" BrowseName="2:Power" AccessLevel="3">
+        <DisplayName>Power</DisplayName>
+        <Description>Power in conjuction with the "Unit" node</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5035</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5035" NodeId="ns=1;i=6137" BrowseName="2:Type" AccessLevel="3">
+        <DisplayName>Type</DisplayName>
+        <Description>The type of the load, e.g. electric, pneumatic, thermal, etc.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5035</Reference>
+        </References>
+        <Value>
+            <uax:String>electric</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5035" NodeId="ns=1;i=6138" BrowseName="2:Unit" AccessLevel="3">
+        <DisplayName>Unit</DisplayName>
+        <Description>The unit either associated with the "AveragePower" or "Power" node</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5035</Reference>
+        </References>
+        <Value>
+            <uax:String>Watt</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject NodeId="ns=1;i=5027" BrowseName="1:Kuehlpumpe">
+        <DisplayName>Kuehlpumpe</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1005</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6088</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6089</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5010</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6092</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6090</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6091</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5027" NodeId="ns=1;i=6088" BrowseName="2:CurrentCO2Emission" AccessLevel="3">
+        <DisplayName>CurrentCO2Emission</DisplayName>
+        <Description>In CO2-eq/h</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5027</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5027" NodeId="ns=1;i=6089" BrowseName="2:IsOn" AccessLevel="3">
+        <DisplayName>IsOn</DisplayName>
+        <Description>Node that represents the current state of the load, either on or off.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5027</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>false</uax:Boolean>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5027" NodeId="ns=1;i=6092" BrowseName="2:Power" AccessLevel="3">
+        <DisplayName>Power</DisplayName>
+        <Description>Power in conjuction with the "Unit" node</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5027</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5027" NodeId="ns=1;i=6090" BrowseName="2:Type" AccessLevel="3">
+        <DisplayName>Type</DisplayName>
+        <Description>The type of the load, e.g. electric, pneumatic, thermal, etc.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5027</Reference>
+        </References>
+        <Value>
+            <uax:String>electric</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5027" NodeId="ns=1;i=6091" BrowseName="2:Unit" AccessLevel="3">
+        <DisplayName>Unit</DisplayName>
+        <Description>The unit either associated with the "AveragePower" or "Power" node</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5027</Reference>
+        </References>
+        <Value>
+            <uax:String>Watt</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject NodeId="ns=1;i=5038" BrowseName="1:Luefter_SchwaKo">
+        <DisplayName>Luefter_SchwaKo</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1005</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6155</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6151</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6152</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5010</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6153</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6154</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5038" NodeId="ns=1;i=6155" BrowseName="2:AveragePower" AccessLevel="3">
+        <DisplayName>AveragePower</DisplayName>
+        <Description>Average power in conjuction with the "Unit" node. Use this node if the loads power can not be measured directly or indirectly. See technical documentation of the load</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5038</Reference>
+        </References>
+        <Value>
+            <uax:Double>530</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5038" NodeId="ns=1;i=6151" BrowseName="2:CurrentCO2Emission" AccessLevel="3">
+        <DisplayName>CurrentCO2Emission</DisplayName>
+        <Description>In CO2-eq/h</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5038</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5038" NodeId="ns=1;i=6152" BrowseName="2:IsOn" AccessLevel="3">
+        <DisplayName>IsOn</DisplayName>
+        <Description>Node that represents the current state of the load, either on or off.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5038</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>false</uax:Boolean>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5038" NodeId="ns=1;i=6153" BrowseName="2:Type" AccessLevel="3">
+        <DisplayName>Type</DisplayName>
+        <Description>The type of the load, e.g. electric, pneumatic, thermal, etc.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5038</Reference>
+        </References>
+        <Value>
+            <uax:String>electric</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5038" NodeId="ns=1;i=6154" BrowseName="2:Unit" AccessLevel="3">
+        <DisplayName>Unit</DisplayName>
+        <Description>The unit either associated with the "AveragePower" or "Power" node</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5038</Reference>
+        </References>
+        <Value>
+            <uax:String>Watt</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject NodeId="ns=1;i=5037" BrowseName="1:Spritzpumpe_SZ">
+        <DisplayName>Spritzpumpe_SZ</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1005</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6149</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6145</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6146</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5010</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6147</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6148</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5037" NodeId="ns=1;i=6149" BrowseName="2:AveragePower" AccessLevel="3">
+        <DisplayName>AveragePower</DisplayName>
+        <Description>Average power in conjuction with the "Unit" node. Use this node if the loads power can not be measured directly or indirectly. See technical documentation of the load</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5037</Reference>
+        </References>
+        <Value>
+            <uax:Double>3000</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5037" NodeId="ns=1;i=6145" BrowseName="2:CurrentCO2Emission" AccessLevel="3">
+        <DisplayName>CurrentCO2Emission</DisplayName>
+        <Description>In CO2-eq/h</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5037</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5037" NodeId="ns=1;i=6146" BrowseName="2:IsOn" AccessLevel="3">
+        <DisplayName>IsOn</DisplayName>
+        <Description>Node that represents the current state of the load, either on or off.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5037</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>false</uax:Boolean>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5037" NodeId="ns=1;i=6147" BrowseName="2:Type" AccessLevel="3">
+        <DisplayName>Type</DisplayName>
+        <Description>The type of the load, e.g. electric, pneumatic, thermal, etc.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5037</Reference>
+        </References>
+        <Value>
+            <uax:String>electric</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5037" NodeId="ns=1;i=6148" BrowseName="2:Unit" AccessLevel="3">
+        <DisplayName>Unit</DisplayName>
+        <Description>The unit either associated with the "AveragePower" or "Power" node</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5037</Reference>
+        </References>
+        <Value>
+            <uax:String>Watt</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject NodeId="ns=1;i=5036" BrowseName="1:Spritzpumpe_WZ">
+        <DisplayName>Spritzpumpe_WZ</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1005</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6150</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6141</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6142</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5010</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6143</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6144</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5036" NodeId="ns=1;i=6150" BrowseName="2:AveragePower" AccessLevel="3">
+        <DisplayName>AveragePower</DisplayName>
+        <Description>Average power in conjuction with the "Unit" node. Use this node if the loads power can not be measured directly or indirectly. See technical documentation of the load</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5036</Reference>
+        </References>
+        <Value>
+            <uax:Double>3000</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5036" NodeId="ns=1;i=6141" BrowseName="2:CurrentCO2Emission" AccessLevel="3">
+        <DisplayName>CurrentCO2Emission</DisplayName>
+        <Description>In CO2-eq/h</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5036</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5036" NodeId="ns=1;i=6142" BrowseName="2:IsOn" AccessLevel="3">
+        <DisplayName>IsOn</DisplayName>
+        <Description>Node that represents the current state of the load, either on or off.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5036</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>false</uax:Boolean>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5036" NodeId="ns=1;i=6143" BrowseName="2:Type" AccessLevel="3">
+        <DisplayName>Type</DisplayName>
+        <Description>The type of the load, e.g. electric, pneumatic, thermal, etc.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5036</Reference>
+        </References>
+        <Value>
+            <uax:String>electric</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5036" NodeId="ns=1;i=6144" BrowseName="2:Unit" AccessLevel="3">
+        <DisplayName>Unit</DisplayName>
+        <Description>The unit either associated with the "AveragePower" or "Power" node</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5036</Reference>
+        </References>
+        <Value>
+            <uax:String>Watt</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject NodeId="ns=1;i=5040" BrowseName="1:Umlufttrockner">
+        <DisplayName>Umlufttrockner</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1005</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6165</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6161</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6162</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6163</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5010</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6164</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5040" NodeId="ns=1;i=6165" BrowseName="2:AveragePower" AccessLevel="3">
+        <DisplayName>AveragePower</DisplayName>
+        <Description>Average power in conjuction with the "Unit" node. Use this node if the loads power can not be measured directly or indirectly. See technical documentation of the load</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5040</Reference>
+        </References>
+        <Value>
+            <uax:Double>24000</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5040" NodeId="ns=1;i=6161" BrowseName="2:CurrentCO2Emission" AccessLevel="3">
+        <DisplayName>CurrentCO2Emission</DisplayName>
+        <Description>In CO2-eq/h</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5040</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5040" NodeId="ns=1;i=6162" BrowseName="2:IsOn" AccessLevel="3">
+        <DisplayName>IsOn</DisplayName>
+        <Description>Node that represents the current state of the load, either on or off.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5040</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>false</uax:Boolean>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5040" NodeId="ns=1;i=6163" BrowseName="2:Type" AccessLevel="3">
+        <DisplayName>Type</DisplayName>
+        <Description>The type of the load, e.g. electric, pneumatic, thermal, etc.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5040</Reference>
+        </References>
+        <Value>
+            <uax:String>electric</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5040" NodeId="ns=1;i=6164" BrowseName="2:Unit" AccessLevel="3">
+        <DisplayName>Unit</DisplayName>
+        <Description>The unit either associated with the "AveragePower" or "Power" node</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5040</Reference>
+        </References>
+        <Value>
+            <uax:String>Watt</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject NodeId="ns=1;i=5041" BrowseName="1:Vakuumtrockner">
+        <DisplayName>Vakuumtrockner</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1005</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6170</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6166</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6167</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6168</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6169</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5010</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5041" NodeId="ns=1;i=6170" BrowseName="2:AveragePower" AccessLevel="3">
+        <DisplayName>AveragePower</DisplayName>
+        <Description>Average power in conjuction with the "Unit" node. Use this node if the loads power can not be measured directly or indirectly. See technical documentation of the load</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5041</Reference>
+        </References>
+        <Value>
+            <uax:Double>7500</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5041" NodeId="ns=1;i=6166" BrowseName="2:CurrentCO2Emission" AccessLevel="3">
+        <DisplayName>CurrentCO2Emission</DisplayName>
+        <Description>In CO2-eq/h</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5041</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5041" NodeId="ns=1;i=6167" BrowseName="2:IsOn" AccessLevel="3">
+        <DisplayName>IsOn</DisplayName>
+        <Description>Node that represents the current state of the load, either on or off.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5041</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>false</uax:Boolean>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5041" NodeId="ns=1;i=6168" BrowseName="2:Type" AccessLevel="3">
+        <DisplayName>Type</DisplayName>
+        <Description>The type of the load, e.g. electric, pneumatic, thermal, etc.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5041</Reference>
+        </References>
+        <Value>
+            <uax:String>electric</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5041" NodeId="ns=1;i=6169" BrowseName="2:Unit" AccessLevel="3">
+        <DisplayName>Unit</DisplayName>
+        <Description>The unit either associated with the "AveragePower" or "Power" node</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5041</Reference>
+        </References>
+        <Value>
+            <uax:String>Watt</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject ParentNodeId="ns=1;i=5008" NodeId="ns=1;i=5012" BrowseName="2:RunTimeData">
+        <DisplayName>RunTimeData</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1015</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6011</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6025</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5008</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6012</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="DateTime" ParentNodeId="ns=1;i=5012" NodeId="ns=1;i=6011" BrowseName="2:BeginOfCalculation" AccessLevel="3">
+        <DisplayName>BeginOfCalculation</DisplayName>
+        <Description>Marks the beginning of the interval up to now, in which the other variables contained in the RunTimeDataType are calculated</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5012</Reference>
+        </References>
+        <Value>
+            <uax:DateTime>2000-01-01T00:00:00Z</uax:DateTime>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Int32" ParentNodeId="ns=1;i=5012" NodeId="ns=1;i=6025" BrowseName="2:CompletedWorkpieces" AccessLevel="3">
+        <DisplayName>CompletedWorkpieces</DisplayName>
+        <Description>Integer value of workpieces completed in the given timeframe.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5012</Reference>
+        </References>
+        <Value>
+            <uax:Int32>0</uax:Int32>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5012" NodeId="ns=1;i=6012" BrowseName="2:WorkingHours" AccessLevel="3">
+        <DisplayName>WorkingHours</DisplayName>
+        <Description>working hours/length of the timeframe used to calculate completed jobs and workpieces</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5012</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAObject ParentNodeId="ns=1;i=5008" NodeId="ns=1;i=5013" BrowseName="2:TotalCO2Emission">
+        <DisplayName>TotalCO2Emission</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1010</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6013</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6014</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6015</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5008</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6016</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5013" NodeId="ns=1;i=6013" BrowseName="2:Amount" AccessLevel="3">
+        <DisplayName>Amount</DisplayName>
+        <Description>Total CO2 Emission of the machine in a given timeframe, from "BeginOfCalculation to now. In conjunction with a unit.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5013</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="DateTime" ParentNodeId="ns=1;i=5013" NodeId="ns=1;i=6014" BrowseName="2:BeginOfCalculation" AccessLevel="3">
+        <DisplayName>BeginOfCalculation</DisplayName>
+        <Description>Marks the datetime, from which to now the amount of emitted CO2 is calculated.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5013</Reference>
+        </References>
+        <Value>
+            <uax:DateTime>2000-01-01T00:00:00Z</uax:DateTime>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5013" NodeId="ns=1;i=6015" BrowseName="2:CurrentCO2Emission" AccessLevel="3">
+        <DisplayName>CurrentCO2Emission</DisplayName>
+        <Description>Current CO2 Emission in unit/time, preferrably CO2-eq/h.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5013</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5013" NodeId="ns=1;i=6016" BrowseName="2:Unit" AccessLevel="3">
+        <DisplayName>Unit</DisplayName>
+        <Description>The unit of the co2 Emitted, e.g. CO2-eq.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5013</Reference>
+        </References>
+        <Value>
+            <uax:String>CO2-eq, CO2-eq/h</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject ParentNodeId="ns=1;i=5008" NodeId="ns=1;i=5014" BrowseName="2:TotalEnergyConsumption">
+        <DisplayName>TotalEnergyConsumption</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5015</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5017</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5008</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5014" NodeId="ns=1;i=5015" BrowseName="2:ElectricPowerConsumption">
+        <DisplayName>ElectricPowerConsumption</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1007</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6017</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6018</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6019</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5014</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6020</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6021</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5015" NodeId="ns=1;i=6017" BrowseName="2:Amount" AccessLevel="3">
+        <DisplayName>Amount</DisplayName>
+        <Description>Total energy amount used, calculated from "BeginOfCalculation" to now.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5015</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="DateTime" ParentNodeId="ns=1;i=5015" NodeId="ns=1;i=6018" BrowseName="2:BeginOfCalculation" AccessLevel="3">
+        <DisplayName>BeginOfCalculation</DisplayName>
+        <Description>Datetime, marks the beginning of the calculation for the total energy used.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5015</Reference>
+        </References>
+        <Value>
+            <uax:DateTime>2000-01-01T00:00:00Z</uax:DateTime>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5015" NodeId="ns=1;i=6019" BrowseName="2:CurrentConsumption" AccessLevel="3">
+        <DisplayName>CurrentConsumption</DisplayName>
+        <Description>Current Consumption in unit/time.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5015</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5015" NodeId="ns=1;i=6020" BrowseName="2:Type" AccessLevel="3">
+        <DisplayName>Type</DisplayName>
+        <Description>Type of energy, e.g. electric, thermal, pressurized air, etc.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5015</Reference>
+        </References>
+        <Value>
+            <uax:String>electric</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5015" NodeId="ns=1;i=6021" BrowseName="2:Unit" AccessLevel="3">
+        <DisplayName>Unit</DisplayName>
+        <Description>Unit of the consumed energy, e.g. Watt, Joule, Liters(bar).</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5015</Reference>
+        </References>
+        <Value>
+            <uax:String>W, Wh</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject NodeId="ns=1;i=5017" BrowseName="1:PressurizedAirConsumption">
+        <DisplayName>PressurizedAirConsumption</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=2;i=1007</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6026</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6027</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6028</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5014</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6029</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6030</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5017" NodeId="ns=1;i=6026" BrowseName="2:Amount" AccessLevel="3">
+        <DisplayName>Amount</DisplayName>
+        <Description>Total energy amount used, calculated from "BeginOfCalculation" to now.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5017</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="DateTime" ParentNodeId="ns=1;i=5017" NodeId="ns=1;i=6027" BrowseName="2:BeginOfCalculation" AccessLevel="3">
+        <DisplayName>BeginOfCalculation</DisplayName>
+        <Description>Datetime, marks the beginning of the calculation for the total energy used.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5017</Reference>
+        </References>
+        <Value>
+            <uax:DateTime>2000-01-01T00:00:00Z</uax:DateTime>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5017" NodeId="ns=1;i=6028" BrowseName="2:CurrentConsumption" AccessLevel="3">
+        <DisplayName>CurrentConsumption</DisplayName>
+        <Description>Current Consumption in unit/time.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5017</Reference>
+        </References>
+        <Value>
+            <uax:Double>0</uax:Double>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5017" NodeId="ns=1;i=6029" BrowseName="2:Type" AccessLevel="3">
+        <DisplayName>Type</DisplayName>
+        <Description>Type of energy, e.g. electric, thermal, pressurized air, etc.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5017</Reference>
+        </References>
+        <Value>
+            <uax:String>pressurized air at 12 bar</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5017" NodeId="ns=1;i=6030" BrowseName="2:Unit" AccessLevel="3">
+        <DisplayName>Unit</DisplayName>
+        <Description>Unit of the consumed energy, e.g. Watt, Joule, Liters(bar).</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5017</Reference>
+        </References>
+        <Value>
+            <uax:String>Liters(12bar), Liters(12bar)/h</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject ParentNodeId="ns=1;i=5001" NodeId="ns=1;i=5016" BrowseName="3:Identification">
+        <DisplayName>Identification</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=3;i=1012</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5001</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6022</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6023</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6024</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="LocalizedText" ParentNodeId="ns=1;i=5016" NodeId="ns=1;i=6022" BrowseName="4:Manufacturer">
+        <DisplayName>Manufacturer</DisplayName>
+        <Description Locale="en">A human-readable, localized name of the manufacturer of the MachineryItem.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5016</Reference>
+        </References>
+        <Value>
+            <uax:LocalizedText>
+                <uax:Text>BvL</uax:Text>
+            </uax:LocalizedText>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5016" NodeId="ns=1;i=6023" BrowseName="4:ProductInstanceUri">
+        <DisplayName Locale="en">ProductInstanceUri</DisplayName>
+        <Description Locale="en">A globally unique resource identifier provided by the manufacturer of the machine</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5016</Reference>
+        </References>
+        <Value>
+            <uax:String>123456</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5016" NodeId="ns=1;i=6024" BrowseName="4:SerialNumber">
+        <DisplayName>SerialNumber</DisplayName>
+        <Description Locale="en">A string containing a unique production number of the manufacturer of the MachineryItem. The global uniqueness of the serial number is only given in the context of the manufacturer, and potentially the model. The value shall not change during the life-cycle of the MachineryItem.</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5016</Reference>
+        </References>
+        <Value>
+            <uax:String>987654321</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject SymbolicName="http___yourorganisation_org_dlra_server_" NodeId="ns=1;i=5043" BrowseName="1:http://yourorganisation.org/dlra server/">
+        <DisplayName>http://yourorganisation.org/dlra server/</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=11616</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">i=11715</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6176</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6177</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6178</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6179</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6180</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6181</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6182</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5043" NodeId="ns=1;i=6176" BrowseName="IsNamespaceSubset">
+        <DisplayName>IsNamespaceSubset</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5043</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>false</uax:Boolean>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="DateTime" ParentNodeId="ns=1;i=5043" NodeId="ns=1;i=6177" BrowseName="NamespacePublicationDate">
+        <DisplayName>NamespacePublicationDate</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5043</Reference>
+        </References>
+        <Value>
+            <uax:DateTime>2024-01-19T20:16:32Z</uax:DateTime>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5043" NodeId="ns=1;i=6178" BrowseName="NamespaceUri">
+        <DisplayName>NamespaceUri</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5043</Reference>
+        </References>
+        <Value>
+            <uax:String>http://yourorganisation.org/dlra server/</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5043" NodeId="ns=1;i=6179" BrowseName="NamespaceVersion">
+        <DisplayName>NamespaceVersion</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5043</Reference>
+        </References>
+        <Value>
+            <uax:String>1.0.0</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="IdType" ParentNodeId="ns=1;i=5043" ValueRank="1" NodeId="ns=1;i=6180" ArrayDimensions="0" BrowseName="StaticNodeIdTypes">
+        <DisplayName>StaticNodeIdTypes</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5043</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="NumericRange" ParentNodeId="ns=1;i=5043" ValueRank="1" NodeId="ns=1;i=6181" ArrayDimensions="0" BrowseName="StaticNumericNodeIdRange">
+        <DisplayName>StaticNumericNodeIdRange</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5043</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5043" NodeId="ns=1;i=6182" BrowseName="StaticStringNodeIdPattern">
+        <DisplayName>StaticStringNodeIdPattern</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5043</Reference>
+        </References>
+    </UAVariable>
+</UANodeSet>
